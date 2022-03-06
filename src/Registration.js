@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { getAllNames } from './InternetFunctions';
 import './Registration.css';
-
+import Button from 'react-bootstrap/Button';
 
 class Registration extends Component {
     constructor(props) {
@@ -73,18 +73,18 @@ class Registration extends Component {
     render() {
 
 
-        let buttonValue = 'Senda';
+        let buttonValue = 'Pick a random person';
         if (this.state.loading) {
             buttonValue = <div className="lds-ring"><div></div><div></div><div></div><div></div></div>;
         }
         return (
             <div className="registration-all">
-                <h1>
-                    Choose next daily person:
+                <h1 className='header-text'>
+                    Choose next data person for daily:
                 </h1>
-                <button type="button" className="btn btn-primary btn-lg" value="senda" onClick={this.sendButtonPressed}>
+                <Button variant="dark" className="btn btn-primary btn-lg button" value="Pick person" onClick={this.sendButtonPressed} state={''}>
                     {buttonValue}
-                </button>
+                </Button>
             </div>
         );
     }

@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { sendNewlyPickedPerson } from './InternetFunctions';
+import Button from 'react-bootstrap/Button';
+
+import './Registration.css';
+
 
 class SuccessPage extends Component {
     constructor(props) {
@@ -26,20 +30,20 @@ class SuccessPage extends Component {
         }
 
         let buttons = <div>
-            <button type="button" onClick={this.yesButtonPressed}>Yes</button>
-            <button type="button" onClick={this.props.chooseNewPerson}>No</button>
+            <Button variant="danger"  type="button" className='button' size="lg" onClick={this.props.chooseNewPerson}>No</Button>
+            <Button variant="success" type="button" className='button' size="lg" onClick={this.yesButtonPressed}>Yes</Button>
         </div>
 
         if (nobodyLeft) {
-            buttons = <button type="button" onClick={this.props.goBack}>Try again</button>;
+            buttons = <Button variant="dark" className="btn btn-primary btn-lg button" onClick={this.props.goBack}>Try again</Button>;
         }
         if (this.state.yesButtonPressed) {
             message = this.props.chosenPerson + ' will host the daily';
-            buttons = ''
+            buttons = <Button variant="dark" className="btn btn-primary btn-lg button" onClick={this.props.goBack}>Start again</Button>
         }
         return (
             <div>
-                <h1>
+                <h1 className='header-text'>
                     {message}
                 </h1>
                 {buttons}

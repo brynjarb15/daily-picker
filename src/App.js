@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Registration from './Registration';
 import ErrorPage from './ErrorPage';
 import SuccessPage from "./SuccessPage";
+import logo from './ccp-logo-white.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 
@@ -78,11 +80,11 @@ class App extends Component {
     return 'Error';
   }
 
-  chooseNewPerson(){
+  chooseNewPerson() {
     let allPersons = this.state.personsToChooseFrom;
     let chosenPerson = this.state.chosenPerson;
-    for(let i = 0; i< allPersons.length; i++) {
-      if(allPersons[i][0] === chosenPerson) {
+    for (let i = 0; i < allPersons.length; i++) {
+      if (allPersons[i][0] === chosenPerson) {
         allPersons[i][2] = 'NotHere';
       }
     }
@@ -115,9 +117,18 @@ class App extends Component {
 
     return (
       <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+        </header>
         {page}
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossOrigin="anonymous" />
-
+        <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+        <script
+          src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
+          crossorigin></script>
+        <script
+          src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+          crossorigin></script>
       </div>
     );
   }

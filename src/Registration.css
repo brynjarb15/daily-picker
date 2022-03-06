@@ -56,8 +56,14 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
-button {
-    margin-top: 1em;
+.button {
+    margin-top: 3em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.header-text {
+  margin-top: 3em;
 }
 
 /* Credit https://loading.io/css/ */
