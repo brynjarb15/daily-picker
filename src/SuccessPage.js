@@ -38,7 +38,7 @@ class SuccessPage extends Component {
             buttons = <Button variant="dark" className="btn btn-primary btn-lg button" onClick={this.props.goBack}>Try again</Button>;
         }
         if (this.state.yesButtonPressed) {
-            message = this.props.chosenPerson + ' will host the daily';
+            message = <p><b> {this.props.chosenPerson} </b> will host the daily</p>
             buttons = <Button variant="dark" className="btn btn-primary btn-lg button" onClick={this.props.goBack}>Start again</Button>
         }
         return (

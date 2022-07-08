@@ -11,7 +11,6 @@ function getAllNames(cb) {
 	//let url = 'https://script.google.com/macros/s/AKfycbwV_Bw6shvkcPVE3eAHRe9fqg48haLJuAJqSWb8PYgqh1yoA84n/exec?';
 	const url = process.env.REACT_APP_GOOGLE_URL + '?name=' + name;
 	axios.post(url).then((res) => console.log(res));
-
 }
 
 export { getAllNames, sendNewlyPickedPerson };

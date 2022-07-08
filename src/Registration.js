@@ -58,9 +58,6 @@ class Registration extends Component {
 
     // Callback sent with the send form to sheet
     formSentCallback(response) {
-        // Make all empty
-        //this.setState(this.initState);
-        console.log(response);
         this.props.formSentCallback(response);
     }
 

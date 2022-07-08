@@ -88,11 +88,8 @@ class App extends Component {
         allPersons[i][2] = 'NotHere';
       }
     }
-    console.log(allPersons);
     let nextChosenPerson = this.choosePersonFromListOfPersons(allPersons);
     this.setState({ chosenPerson: nextChosenPerson, personsToChooseFrom: allPersons })
-
-    console.log(nextChosenPerson);
   }
 
   goBackToRegistration() {
